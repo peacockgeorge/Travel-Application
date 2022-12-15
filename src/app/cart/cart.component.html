@@ -1,0 +1,14 @@
+<div id="Cont" fxLayout="column" fxLayoutAlign="center center">
+    <mat-card id="container" fxLayout="column" fxLayoutAlign="center center">
+        <h3>Shopping Cart</h3>
+        <div class="cart-item" *ngFor="let item of items;let indexOfelement=index;">
+            <p>
+                Destinacija: &nbsp;<b>{{ item.name }} </b> &nbsp;&nbsp;&nbsp; Cena: &nbsp;<b>{{ item.price }} RSD </b> &nbsp;&nbsp;&nbsp;&nbsp; <button (click)="deleteItem(indexOfelement)" class="btn btn-light"><mat-icon>delete</mat-icon></button>
+            </p>
+        </div>
+        <p fxLayout="row" fxLayoutAlign="space-evenly center">Total: {{ getTotal() }} RSD &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            <button mat-raised-button color="primary" class="btn btn-primary" (click)="checkout()" routerLink="/product">Checkout</button></p>
+    </mat-card>
+
+
+</div>

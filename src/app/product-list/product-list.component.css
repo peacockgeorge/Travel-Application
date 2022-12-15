@@ -1,0 +1,42 @@
+#container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.example-card {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 350px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#pictureContainer {
+    height: 100px;
+    width: 100px;
+}
+
+.img-centered {
+    margin: auto;
+    display: block;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+mat-radio-group {
+    margin-top: 30px;
+}
+
+mat-radio-button {
+    margin-left: 15px;
+}
+
+mat-form-field {
+    margin-top: 30px;
+}

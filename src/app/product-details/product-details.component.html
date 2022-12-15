@@ -1,0 +1,28 @@
+<h2 fxLayout="row" fxLayoutAlign="center center">Details of the trip</h2>
+
+
+<mat-card fxLayout="column" fxLayoutAlign="center center" *ngIf="product">
+    <mat-card-header>
+        <div class="example-header-image"></div>
+        <mat-card-title><a [title]="product.name + ' details'">
+        {{ product.name }}
+      </a></mat-card-title>
+    </mat-card-header>
+    
+    <img mat-card-image [src]="product.image" style="height: 300px; width: 300px;" alt="fruit">
+    
+    <mat-card-content fxLayout="column" fxLayoutAlign="center center">
+        <p>
+            {{ product.description }}
+        </p>
+        <p>Price per person: {{ product.price }} RSD</p>
+        <p>Available rooms: {{ product.quantity }}</p>
+        <p>Category: {{ product.category }} </p>
+        <p>Positive reviews: {{ product.positive }} </p>
+        <p>Negative reviews: {{ product.negative }} </p>
+
+    </mat-card-content>
+
+    <button mat-raised-button color="primary" (click)="addToCart(product)" class="btn btn-primary" routerLink="/product">Reserve</button>
+
+</mat-card>
